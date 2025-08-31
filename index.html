@@ -18,7 +18,7 @@
 
     <!-- navbar starts -->
     <header>
-        <section class="w-[1280px] mx-auto mt-4 flex justify-between">
+        <section class=" mx-auto mt-4 flex justify-between ml-8 mr-8">
             <div class="flex gap-2">
                 <img class="w-10 h-10 mt-3" src="./assets/logo.png" alt="">
                 <h2 class="text-[#006747] text-xl font-bold mb-3">Emergency <br> Service</h2>
@@ -28,7 +28,7 @@
                     <button class="btn bg-[#41FF6B1A] rounded-xl px-5 p-3"><span>0</span><img class="w-7" src="./assets/heart.png" alt=""></button>
                     <button class="btn bg-[#41FF6B1A] rounded-xl px-5 p-3"><span>0</span><img class="w-7" src="./assets/coin.png" alt=""></button>
 
-                    <button class="btn text-white bg-green-600 rounded-xl px-7 py-1">Copy</button>
+                    <button class="btn text-white bg-green-600 rounded-3xl px-7 py-1">Copy</button>
 
                 </div>
                 <div>
@@ -39,7 +39,7 @@
     </header>
     <!-- navbar ends -->
     
-    <main class="bg-[#F5FFF6]">
+    <main class="bg-[#F5FFF6]  ">
         <!-- hero section starts -->
         <section class="w-full ">
             <div class="flex flex-col justify-center items-center  bg-gradient-to-r from-green-800 to-green-900 text-white p-3 w-full h-[239px]">
@@ -50,7 +50,7 @@
         </section>
         <!-- hero section ends -->
 
-        <section class="grid grid-cols-12  ">
+        <section class="grid grid-cols-12 ">
             <section class="grid grid-cols-3 col-span-9 gap-x-16 gap-y-6 p-8">
 
                 <!-- card section starts -->
@@ -237,18 +237,27 @@
                 </div>
 
                 <!-- card section ends -->
-                 
 
+            </section>
+            
+            <!-- call history section starts -->
+            <section class="col-span-3 bg-white p-4 mt-8 rounded-xl mr-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center ">
+                        <span class="w-10 h-10 mt-3 items-center justify-center text-gray-600 "><i class="fa-regular fa-clock"></i></span>
+                        <h2 class="text-xl font-medium">Call History</h2>
+                    </div>
+                    <button class="bg-green-700 text-white rounded-3xl px-5 py-3 font-medium">Clear</button>
+                </div>
 
-
-
-
-
-
+            </section>
+            <!-- call history section ends -->
 
 
             </section>
         </section>
+
+
 
     </main>
     <script src="./script/index.js"></script>
