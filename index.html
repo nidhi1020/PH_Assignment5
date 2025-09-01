@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- tailwind & daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papNM3o5LJ4zYlN6zS1LZp6YU5lfLJfUm/j5H3MoUKt2N5F+Ek+14Qg+XoHn16S7Zh5sjqf3y+6qlP/zMJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+
 
 </head>
 <body class="">
 
     <!-- navbar starts -->
-    <header>
+    <header class="w-full bg-white shadow-sm">
         <section class=" mx-auto mt-4 flex justify-between ml-8 mr-8">
             <div class="flex gap-2">
                 <img class="w-10 h-10 mt-3" src="./assets/logo.png" alt="">
@@ -25,8 +25,8 @@
             </div>
             <div class="">
                 <div id="favourite" class="flex gap-6">
-                    <button class="btn bg-[#41FF6B1A] rounded-xl px-5 p-3"><span>0</span><img class="w-7" src="./assets/heart.png" alt=""></button>
-                    <button class="btn bg-[#41FF6B1A] rounded-xl px-5 p-3"><span>0</span><img class="w-7" src="./assets/coin.png" alt=""></button>
+                    <button class="btn bg-[#41FF6B1A] rounded-xl px-5 p-3"><span id="heart-cnt">0</span><img class="w-7" src="./assets/heart.png" alt=""></button>
+                    <button class="btn bg-[#41FF6B1A] rounded-xl px-5 p-3"><span id="coin-cnt">100</span><img class="w-7" src="./assets/coin.png" alt=""></button>
 
                     <button class="btn text-white bg-green-600 rounded-3xl px-7 py-1">Copy</button>
 
@@ -43,26 +43,27 @@
         <!-- hero section starts -->
         <section class="w-full ">
             <div class="flex flex-col justify-center items-center  bg-gradient-to-r from-green-800 to-green-900 text-white p-3 w-full h-[239px]">
-                <img class="w-20 h-20 justify-center text-center" src="./assets/logo.png" alt="">
-                <h2 class="text-4xl font-xl mt-2">Emergency Service Directory</h2>
-                <p class="mt-2 font-bold text-xl">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+                <img class="lg:w-20 h-20 md:w-20 sm:w-5 h-15 mt-3 justify-center text-center" src="./assets/logo.png" alt="">
+                <h2 class="lg:text-4xl font-xl mt-2 md:text-2xl sm:text-2xl justify-center text-center ">Emergency Service Directory</h2>
+                <p class="lg:mt-2 font-bold text-xl">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
             </div>
         </section>
         <!-- hero section ends -->
 
-        <section class="grid grid-cols-12 ">
-            <section class="grid grid-cols-3 col-span-9 gap-x-16 gap-y-6 p-8">
+        <section id="product-box" class="grid grid-cols-1  lg:grid-cols-12 gap-6 p-4 lg:p-8 ">
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  col-span-1 lg:col-span-9 gap-x-16 gap-y-6 p-8 ">
 
                 <!-- card section starts -->
 
-                <div class="card-1">
+                <div class="card" id="card-1">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#FFE3E2]" src="./assets/emergency.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <!--  -->
+                                <span id="heart-btn-1" class=" text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
-                            <h2 class="card-title text-xl font-bold">National Emargerncy Number</h2>
+                            <h2 id="card-title-1" class="card-title text-xl font-bold">National Emargerncy Number</h2>
                             <p class="text-[#5C5C5C]">National Emargerncy</p>
                             <h2 class="text-2xl font-bold">999</h2>
                             <button class="bg-gray-200 text-sm w-11 px-2 py-1 rounded-xl text-[#5C5C5C]">All</button>
@@ -75,12 +76,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-2">
+                <div class="card" id="card-2">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#DFEFFF]" src="./assets/police.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
                             <h2 class="card-title text-xl font-bold">Police Helpline Number</h2>
                             <p class="text-[#5C5C5C]">Police</p>
@@ -95,12 +96,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-3">
+                <div class="card" id="card-3">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#FFE3E2]" src="./assets/fire-service.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
                             <h2 class="card-title text-xl font-bold">Fire Service Number</h2>
                             <p class="text-[#5C5C5C]">Fire Service</p>
@@ -115,12 +116,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-4">
+                <div class="card" id="card-4">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#FFE3E2]" src="./assets/ambulance.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
                             <h2 class="card-title text-xl font-bold">Ambulance Service</h2>
                             <p class="text-[#5C5C5C]">Ambulance</p>
@@ -135,12 +136,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-5">
+                <div class="card" id="card-5">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#FFE3E2]" src="./assets/emergency.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
                             <h2 class="card-title text-xl font-bold">Women & Child Helpline</h2>
                             <p class="text-[#5C5C5C]">Women & Child Helpline</p>
@@ -155,12 +156,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-6">
+                <div class="card" id="card-6">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#FFE3E2]" src="./assets/emergency.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
                             <h2 class="card-title text-xl font-bold">Anti-Corruption Helpline</h2>
                             <p class="text-[#5C5C5C]">Anti-Corruption</p>
@@ -175,12 +176,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-7">
+                <div class="card" id="card-7">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#FFE3E2]" src="./assets/emergency.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
                             <h2 class="card-title text-xl font-bold">Electricity Helpline</h2>
                             <p class="text-[#5C5C5C]">Electricity Outage</p>
@@ -195,12 +196,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-8">
+                <div class="card" id="card-8">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#FFE3E2]" src="./assets/emergency.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
                             <h2 class="card-title text-xl font-bold">Brac Helpline</h2>
                             <p class="text-[#5C5C5C]">Brac</p>
@@ -215,12 +216,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-9">
+                <div class="card" id="card-9">
                     <div class="card w-90 bg-base-100 card-lg shadow-sm  border-gray-900">
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <img class="w-10 h-10 p-2 rounded-md bg-[#FFE3E2]" src="./assets/emergency.png" alt="">
-                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart "></i></span>
+                                <span class="text-xl text-[#5C5C5C]"><i class="fa-regular fa-heart heart-btn"></i></span>
                             </div>
                             <h2 class="card-title text-xl font-bold">Bangladesh Railway Helpline</h2>
                             <p class="text-[#5C5C5C]">Bangladesh Railway</p>
